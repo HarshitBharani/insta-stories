@@ -14,16 +14,18 @@ const StoryList: React.FC<StoryListProps> = ({ onStorySelect }) => {
   }, []);
   console.log(stories);
   return (
-    <div className="story-list">
-      {stories.map((story) => (
-        <img
-          key={story.id}
-          src={story.image}
-          alt={`Story ${story.id}`}
-          className="story-thumbnail"
-          onClick={() => onStorySelect(story.id)}
-        />
-      ))}
+    <div className="story-list-wrapper">
+      <div className="story-list">
+        {stories.map((story) => (
+          <img
+            key={story.id}
+            src={story.image}
+            alt={`Story ${story.id}`}
+            className="story-thumbnail"
+            onClick={() => onStorySelect(story.id - 1)}
+          />
+        ))}
+      </div>
     </div>
   );
 };

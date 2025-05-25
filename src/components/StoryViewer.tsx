@@ -56,7 +56,7 @@ const StoryViewer: React.FC<Props> = ({ startIndex, onClose }) => {
       <img
         src={currentStory.image}
         alt={`Story ${currentStory.id}`}
-        className="story-image"
+        className={`story-image ${!loading ? "loaded" : ""}`}
         onLoad={() => setLoading(false)}
       />
     </div>

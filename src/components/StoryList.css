@@ -1,16 +1,28 @@
 .story-list {
   display: flex;
   overflow-x: auto;
+  padding: 10px;
+  background-color: #fff;
   gap: 12px;
-  padding-bottom: 12px;
+}
+.story-list-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  padding-bottom: 0.5rem;
 }
 
 .story-thumbnail {
-  height: 80px;
-  width: 60px;
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid #e91e63;
   object-fit: cover;
-  border-radius: 8px;
   cursor: pointer;
-  flex-shrink: 0;
-  border: 2px solid white;
+  transition: transform 0.2s;
+}
+
+.story-thumbnail:hover {
+  transform: scale(1.05);
 }

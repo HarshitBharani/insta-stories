@@ -12,14 +12,19 @@ function App() {
 
   return (
     <div className="app-container">
-      <h2 className="title">Stories</h2>
-      <StoryList onStorySelect={handleStorySelect} />
-      {selectedStoryId !== null && (
-        <StoryViewer
-          startIndex={selectedStoryId}
-          onClose={() => setSelectedStoryId(null)}
-        />
-      )}
+      <div className="app">
+        <header className="app-header">
+          <h1>My Stories</h1>
+          <p className="subheading">Tap to view stories</p>
+        </header>
+        <StoryList onStorySelect={handleStorySelect} />
+        {selectedStoryId !== null && (
+          <StoryViewer
+            startIndex={selectedStoryId}
+            onClose={() => setSelectedStoryId(null)}
+          />
+        )}
+      </div>
     </div>
   );
 }
