@@ -1,0 +1,16 @@
+.story-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding-bottom: 12px;
+}
+
+.story-thumbnail {
+  height: 80px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+  border: 2px solid white;
+}
