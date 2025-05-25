@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import storiesData from "../data/stories.json";
-import "./StoryViewer.css";
+import "./storyViewer.css";
 
 interface Props {
   startIndex: number;
