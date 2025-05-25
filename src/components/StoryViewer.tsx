@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Story } from "../types";
 import storiesData from "../data/stories.json";
 import "./StoryViewer.css";
 
