@@ -76,6 +76,24 @@ const StoryViewer: React.FC<Props> = ({
       goNext();
     }
   };
+  const handleKeydown = (e: KeyboardEvent) => {
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      goNext();
+    } else if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      goBack();
+    } else if (e.key === "Escape") {
+      e.preventDefault();
+      onClose();
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeydown);
+    return () => {
+      window.removeEventListener("keydown", handleKeydown);
+    };
+  }, []);
 
   return (
     <div className="story-viewer" onClick={handleTap}>
